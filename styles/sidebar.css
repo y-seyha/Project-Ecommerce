@@ -1,41 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-:root {
-  /* Light theme colors */
-  --color-text-primary: #1f2936;
-  --color-text-placeholder: #798eae;
-  --color-bg-primary: #f9fafb;
-  --color-bg-secondary: #ececfd;
-  --color-bg-sidebar: #ffffff;
-  --color-border-hr: #e2e8f0;
-  --color-hover-primary: #695cfe;
-  --color-hover-secondary: #e2e2fb;
-  --color-shadow: rgba(0, 0, 0, 0.05);
-}
-
-body.dark-theme {
-  /* Dark theme colors */
-  --color-text-primary: #f1f5f9;
-  --color-text-placeholder: #a6b7d2;
-  --color-bg-primary: #111827;
-  --color-bg-secondary: #3d4859;
-  --color-bg-sidebar: #1f2937;
-  --color-border-hr: #3b475c;
-  --color-hover-secondary: #48566a;
-  --color-shadow: rgba(0, 0, 0, 0.3);
-}
-
-body {
-  background-color: var(--color-bg-primary);
-}
-
 .sidebar {
   position: sticky;
   top: 0;
@@ -264,7 +226,7 @@ body {
 .sidebar {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
 }
 
 .sidebar-content {
