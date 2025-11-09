@@ -153,3 +153,56 @@
 .notification-badge {
   animation: pulse 2s infinite;
 }
+
+/* products css */
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row on smaller desktop */
+  }
+}
+
+@media (max-width: 900px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+  }
+
+  .category-card {
+    flex: 0 0 100px; /* slightly smaller */
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-list {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+
+  .category-card {
+    flex: 0 0 80px;
+    font-size: 0.8rem;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}

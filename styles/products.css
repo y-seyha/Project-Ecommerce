@@ -1,4 +1,3 @@
-/* MAIN SECTION */
 .main-section {
   display: flex;
   flex-direction: column;
@@ -8,13 +7,26 @@
   padding: 0 1rem;
 }
 
-/* HERO IMAGE */
-.hero img {
+.hero {
+  position: relative;
   width: 100%;
-  height: 100dvh; /* Full viewport height */
-  object-fit: cover;
-  display: block;
-  border-radius: none; /* Remove border-radius for full width */
+  height: 100vh;
+  background-image: url("../images/pic1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* adjust opacity */
+  z-index: 1;
 }
 
 /* INTRO */
@@ -49,7 +61,7 @@
 }
 
 .category-card {
-  flex: 0 0 120px; /* Smaller cards */
+  flex: 0 0 120px;
   padding: 0.8rem 1rem;
   background-color: #f0f0f0;
   border-radius: 8px;
@@ -64,7 +76,6 @@
   background-color: #e0e0e0;
 }
 
-/* PRODUCTS */
 .products {
   display: flex;
   flex-direction: column;
@@ -73,7 +84,7 @@
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
@@ -100,8 +111,14 @@
   border-radius: 8px;
 }
 
+.product-card name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
 .product-card .stars {
-  color: #fbbf24; /* golden stars */
+  color: #fbbf24;
 }
 
 .product-card .price {
@@ -114,7 +131,22 @@
   color: #555;
 }
 
-/* RESPONSIVE */
+.add-to-cart {
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  background: linear-gradient(to bottom, #e0bc00, #c29b00);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+  margin-top: auto;
+  border-radius: 30px;
+}
+
+.add-to-cart:hover {
+  background: linear-gradient(135deg, #3a86ff, #8338ec);
+}
+
 @media (max-width: 1200px) {
   .product-list {
     grid-template-columns: repeat(3, 1fr); /* 3 per row on smaller desktop */
@@ -128,6 +160,14 @@
 
   .category-card {
     flex: 0 0 100px; /* slightly smaller */
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.3rem;
   }
 }
 
@@ -147,5 +187,13 @@
 
   .intro p {
     font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
   }
 }
