@@ -1,0 +1,151 @@
+/* MAIN SECTION */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* HERO IMAGE */
+.hero img {
+  width: 100%;
+  height: 100dvh; /* Full viewport height */
+  object-fit: cover;
+  display: block;
+  border-radius: none; /* Remove border-radius for full width */
+}
+
+/* INTRO */
+.intro {
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* CATEGORIES */
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.category-card {
+  flex: 0 0 120px; /* Smaller cards */
+  padding: 0.8rem 1rem;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  background-color: #e0e0e0;
+}
+
+/* PRODUCTS */
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+  gap: 1.5rem;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card .stars {
+  color: #fbbf24; /* golden stars */
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.product-card .keywords {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row on smaller desktop */
+  }
+}
+
+@media (max-width: 900px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+  }
+
+  .category-card {
+    flex: 0 0 100px; /* slightly smaller */
+  }
+}
+
+@media (max-width: 600px) {
+  .product-list {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+
+  .category-card {
+    flex: 0 0 80px;
+    font-size: 0.8rem;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+}
