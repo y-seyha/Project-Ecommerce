@@ -44,6 +44,7 @@ body {
 }
 
 body.sidebar-open main,
+body.sidebar-open .hero,
 body.sidebar-open .navbar {
   filter: blur(2px);
   pointer-events: none;
