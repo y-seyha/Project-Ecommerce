@@ -35,3 +35,16 @@ body.dark-theme {
 body {
   background-color: var(--color-bg-primary);
 }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body.sidebar-open main,
+body.sidebar-open .navbar {
+  filter: blur(2px);
+  pointer-events: none;
+}
