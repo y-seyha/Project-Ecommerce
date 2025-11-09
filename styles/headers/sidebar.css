@@ -275,35 +275,3 @@ body.sidebar-open::before {
   margin: 0;
   transition: all 0.3s ease;
 }
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-100%);
-    width: 260px;
-  }
-
-  .sidebar.mobile-open {
-    transform: translateX(0);
-  }
-
-  .sidebar.collapsed {
-    width: 260px;
-    transform: translateX(-100%);
-  }
-
-  .sidebar.collapsed.mobile-open {
-    transform: translateX(0);
-  }
-}
-
-/* For mobile view */
-@media (max-width: 768px) {
-  .sidebar {
-    left: -270px;
-    transition: left 0.4s ease;
-  }
-
-  .sidebar.active {
-    left: 0;
-  }
-}
