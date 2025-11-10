@@ -28,7 +28,7 @@ export const products = [
   {
     id: "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5g",
     name: "Acqua di Gio Profondo",
-    img: "../../images/perfume/perfume1.jpg",
+    img: "../../images/perfume/perfume1.1.jpg",
     rating: 4,
     priceCents: 9800,
     keyword: ["aquatic", "fresh", "masculine"],
@@ -42,7 +42,7 @@ export const products = [
   {
     id: "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
     name: "Armani Stronger With You Intensely",
-    img: "../../images/perfume/perfume2.jpg",
+    img: "../../images/perfume/perfume2.1.jpg",
     rating: 5,
     priceCents: 9800,
     keyword: ["amber", "vanilla", "masculine"],
@@ -56,7 +56,7 @@ export const products = [
   {
     id: "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
     name: "Bleu de Chanel EDP",
-    img: "../../images/perfume/perfume3.jpg",
+    img: "../../images/perfume/perfume1.1.1.jpg",
     rating: 5,
     priceCents: 13500,
     keyword: ["woody", "aromatic", "masculine"],

@@ -9,7 +9,7 @@ products.forEach((product) => {
                 <img src="./images/${product.img}" alt="${product.name}" />
                 <h3 class="name">${product.name}</h3>
                 <div class="stars">${getStarRating(product.rating)}</div>
-                <div class="price">${formatCurrency(product.priceCents)}</div>
+                <div class="price">$${formatCurrency(product.priceCents)}</div>
                 <div class="keywords">${product.keyword.join(", ")}</div>
                 <div class="type">Type: ${product.type}</div>
                 <div class="size">Size: ${product.sizeCharLink}</div>

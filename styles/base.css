@@ -33,6 +33,8 @@ body.dark-theme {
 }
 
 body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
   background-color: var(--color-bg-primary);
 }
 
@@ -45,7 +47,8 @@ body {
 
 body.sidebar-open main,
 body.sidebar-open .hero,
-body.sidebar-open .navbar {
-  filter: blur(2px);
+body.sidebar-open .navbar,
+body-sidebar-open .footer {
+  filter: blur(3px);
   pointer-events: none;
 }
