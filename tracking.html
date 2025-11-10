@@ -14,253 +14,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
     <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/responsive.css" />
-    <link rel="stylesheet" href="styles/products.css" />
+    <link rel="stylesheet" href="styles/website/responsive.css" />
+    <link rel="stylesheet" href="styles/website/products.css" />
     <link rel="stylesheet" href="styles/headers/navbar.css" />
     <link rel="stylesheet" href="styles/headers/sidebar.css" />
-    <link rel="stylesheet" href="styles/footer.css" />
-    <style>
-      .tracking-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        min-height: 70vh;
-      }
-
-      .tracking-header {
-        text-align: center;
-        margin-bottom: 40px;
-      }
-
-      .tracking-header h1 {
-        font-size: 2.5rem;
-        color: #2c3e50;
-        margin-bottom: 10px;
-      }
-
-      .tracking-header p {
-        color: #666;
-        font-size: 1.1rem;
-      }
-
-      .tracking-search {
-        background: white;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 30px;
-      }
-
-      .search-form {
-        display: flex;
-        gap: 15px;
-        max-width: 500px;
-        margin: 0 auto;
-      }
-
-      .search-input {
-        flex: 1;
-        padding: 12px 16px;
-        border: 2px solid #e1e8ed;
-        border-radius: 8px;
-        font-size: 1rem;
-        transition: border-color 0.3s;
-      }
-
-      .search-input:focus {
-        outline: none;
-        border-color: #3498db;
-      }
-
-      .search-btn {
-        background: #3498db;
-        color: white;
-        border: none;
-        padding: 12px 24px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: background 0.3s;
-      }
-
-      .search-btn:hover {
-        background: #2980b9;
-      }
-
-      .tracking-results {
-        background: white;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .order-info {
-        margin-bottom: 30px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #e1e8ed;
-      }
-
-      .order-info h3 {
-        color: #2c3e50;
-        margin-bottom: 15px;
-      }
-
-      .info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-      }
-
-      .info-item {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .info-label {
-        font-weight: 600;
-        color: #666;
-        font-size: 0.9rem;
-        margin-bottom: 5px;
-      }
-
-      .info-value {
-        color: #2c3e50;
-        font-weight: 500;
-      }
-
-      .tracking-timeline {
-        position: relative;
-        padding-left: 30px;
-      }
-
-      .timeline-line {
-        position: absolute;
-        left: 15px;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: #e1e8ed;
-      }
-
-      .timeline-item {
-        position: relative;
-        margin-bottom: 25px;
-        padding-bottom: 25px;
-      }
-
-      .timeline-item:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
-
-      .timeline-dot {
-        position: absolute;
-        left: -33px;
-        top: 5px;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: #bdc3c7;
-        border: 3px solid white;
-        box-shadow: 0 0 0 2px #bdc3c7;
-      }
-
-      .timeline-item.active .timeline-dot {
-        background: #27ae60;
-        box-shadow: 0 0 0 2px #27ae60;
-      }
-
-      .timeline-item.completed .timeline-dot {
-        background: #3498db;
-        box-shadow: 0 0 0 2px #3498db;
-      }
-
-      .timeline-content h4 {
-        color: #2c3e50;
-        margin-bottom: 5px;
-        font-size: 1.1rem;
-      }
-
-      .timeline-content p {
-        color: #666;
-        margin-bottom: 5px;
-      }
-
-      .timeline-date {
-        color: #999;
-        font-size: 0.9rem;
-      }
-
-      .estimated-delivery {
-        background: #e8f4f8;
-        padding: 20px;
-        border-radius: 8px;
-        margin-top: 20px;
-        border-left: 4px solid #3498db;
-      }
-
-      .delivery-date {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #2c3e50;
-      }
-
-      .no-results {
-        text-align: center;
-        padding: 40px;
-        color: #666;
-      }
-
-      .no-results .material-symbols-rounded {
-        font-size: 3rem;
-        color: #bdc3c7;
-        margin-bottom: 15px;
-      }
-
-      .tracking-actions {
-        display: flex;
-        gap: 15px;
-        margin-top: 30px;
-        justify-content: center;
-      }
-
-      .action-btn {
-        padding: 10px 20px;
-        border: 2px solid #3498db;
-        border-radius: 6px;
-        background: white;
-        color: #3498db;
-        cursor: pointer;
-        font-weight: 500;
-        transition: all 0.3s;
-      }
-
-      .action-btn:hover {
-        background: #3498db;
-        color: white;
-      }
-
-      @media (max-width: 768px) {
-        .search-form {
-          flex-direction: column;
-        }
-
-        .tracking-header h1 {
-          font-size: 2rem;
-        }
-
-        .info-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .tracking-actions {
-          flex-direction: column;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles/website/footer.css" />
+    <link rel="stylesheet" href="styles/website/tracking.css" />
   </head>
   <body>
-    <!--Nav Bar-->
+    <!--Nav Bar (kept as in your original)-->
     <nav class="navbar">
       <div class="navbar-left">
         <button class="nav-toggle js-nav-toggle">
@@ -275,17 +37,6 @@
               class="search"
               id="searchInput"
             />
-            <div class="search-results" id="searchResults">
-              <div class="search-header">
-                <h4>Search Results</h4>
-                <button class="close-search" id="closeSearch">
-                  <span class="material-symbols-rounded">close</span>
-                </button>
-              </div>
-              <div class="results-list">
-                <!-- Search results will be populated here -->
-              </div>
-            </div>
           </div>
           <button class="icon-btn">
             <span class="material-symbols-rounded"> notifications </span>
@@ -316,7 +67,7 @@
       </div>
     </nav>
 
-    <!--Side Bar-->
+    <!--Side Bar (kept minimal)-->
     <aside class="sidebar js-sidebar">
       <header class="sidebar-header">
         <img src="" alt="profile-picture" class="header-logo" />
@@ -338,9 +89,9 @@
             </a>
           </li>
           <li class="menu-item">
-            <a href="tracking.html" class="menu-link active">
-              <span class="material-symbols-rounded"> package_2 </span>
-              <span class="menu-label">Track Order</span>
+            <a href="checkout.html" class="menu-link">
+              <span class="material-symbols-rounded"> shopping_cart </span>
+              <span class="menu-label">Cart</span>
             </a>
           </li>
           <li class="menu-item">
@@ -349,10 +100,11 @@
               <span class="menu-label">My Orders</span>
             </a>
           </li>
+
           <li class="menu-item">
-            <a href="checkout.html" class="menu-link">
-              <span class="material-symbols-rounded"> shopping_cart </span>
-              <span class="menu-label">Cart</span>
+            <a href="tracking.html" class="menu-link">
+              <span class="material-symbols-rounded active"> package_2 </span>
+              <span class="menu-label">Track Order</span>
             </a>
           </li>
         </ul>
@@ -378,9 +130,11 @@
         <p>Enter your order number to check the current status</p>
       </div>
 
+      <!-- simple GET form (no JS required) -->
       <div class="tracking-search">
-        <form class="search-form js-tracking-form">
+        <form class="search-form" method="get" action="#">
           <input
+            name="order"
             type="text"
             class="search-input"
             placeholder="Enter Order Number (e.g. FF-123456)"
@@ -390,16 +144,192 @@
         </form>
       </div>
 
-      <div class="tracking-results js-tracking-results">
-        <div class="no-results">
+      <div class="tracking-results">
+        <!-- Default view (visible when user hasn't searched) -->
+        <div class="no-results" id="defaultView">
           <span class="material-symbols-rounded">search</span>
           <h3>Enter your order number to track your package</h3>
           <p>You can find your order number in your order confirmation email</p>
         </div>
+
+        <!-- Example: Order FF-123456 (Shipped) -->
+        <div class="order-result" id="order-FF-123456" style="margin-top: 10px">
+          <div class="order-info">
+            <h3>Order #FF-123456</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">Customer</span>
+                <span class="info-value">John Doe</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Order Date</span>
+                <span class="info-value">2024-01-15</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Status</span>
+                <span class="info-value" style="color: #9b59b6">Shipped</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Total</span>
+                <span class="info-value">$196.00</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Tracking Number</span>
+                <span class="info-value">TRK789456123</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Carrier</span>
+                <span class="info-value">FedEx</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tracking-timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Order placed</h4>
+                <div class="timeline-date">2024-01-15 10:30 AM</div>
+              </div>
+            </div>
+
+            <div class="timeline-item completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Order confirmed</h4>
+                <div class="timeline-date">2024-01-15 11:45 AM</div>
+              </div>
+            </div>
+
+            <div class="timeline-item completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Processing order</h4>
+                <div class="timeline-date">2024-01-16 09:15 AM</div>
+              </div>
+            </div>
+
+            <div class="timeline-item active">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Shipped via FedEx</h4>
+                <p>New York, NY</p>
+                <div class="timeline-date">2024-01-17 02:30 PM</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="estimated-delivery">
+            <h4>Estimated Delivery</h4>
+            <div class="delivery-date">2024-01-20</div>
+          </div>
+
+          <div class="tracking-actions">
+            <button class="action-btn" onclick="window.print()">
+              Print Details
+            </button>
+            <a class="action-btn" href="mailto:support@fragrancefables.com"
+              >Contact Support</a
+            >
+          </div>
+        </div>
+
+        <!-- Example: Order FF-789012 (Delivered) -->
+        <div class="order-result" id="order-FF-789012" style="margin-top: 30px">
+          <div class="order-info">
+            <h3>Order #FF-789012</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">Customer</span>
+                <span class="info-value">Jane Smith</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Order Date</span>
+                <span class="info-value">2024-01-10</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Status</span>
+                <span class="info-value" style="color: #27ae60">Delivered</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Total</span>
+                <span class="info-value">$89.00</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Tracking Number</span>
+                <span class="info-value">TRK123789456</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Carrier</span>
+                <span class="info-value">UPS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tracking-timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Order placed</h4>
+                <div class="timeline-date">2024-01-10 03:20 PM</div>
+              </div>
+            </div>
+
+            <div class="timeline-item completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Order confirmed</h4>
+                <div class="timeline-date">2024-01-10 04:15 PM</div>
+              </div>
+            </div>
+
+            <div class="timeline-item completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Processing order</h4>
+                <div class="timeline-date">2024-01-11 10:00 AM</div>
+              </div>
+            </div>
+
+            <div class="timeline-item completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Shipped via UPS</h4>
+                <p>Los Angeles, CA</p>
+                <div class="timeline-date">2024-01-12 11:30 AM</div>
+              </div>
+            </div>
+
+            <div class="timeline-item active">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Delivered</h4>
+                <p>San Francisco, CA</p>
+                <div class="timeline-date">2024-01-14 01:45 PM</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tracking-actions">
+            <button class="action-btn" onclick="window.print()">
+              Print Details
+            </button>
+            <a class="action-btn" href="mailto:support@fragrancefables.com"
+              >Contact Support</a
+            >
+          </div>
+        </div>
+
+        <!-- Note: in a future JS-enabled version you can hide/show the appropriate block
+             based on the searched order number. -->
       </div>
     </main>
 
-    <!--Footer-->
+    <!-- Footer kept from original -->
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -444,213 +374,7 @@
       </div>
     </footer>
 
+    <!-- minimal script (kept only for layout interactions if you have layout.js) -->
     <script src="scripts/layout.js"></script>
-    <script>
-      // Tracking functionality
-      document.addEventListener("DOMContentLoaded", function () {
-        const trackingForm = document.querySelector(".js-tracking-form");
-        const trackingResults = document.querySelector(".js-tracking-results");
-
-        // Sample tracking data
-        const sampleOrders = {
-          "FF-123456": {
-            orderNumber: "FF-123456",
-            status: "shipped",
-            customer: "John Doe",
-            orderDate: "2024-01-15",
-            items: ["Acqua di Gio Profondo", "Chanel No. 5"],
-            total: "$196.00",
-            trackingNumber: "TRK789456123",
-            carrier: "FedEx",
-            timeline: [
-              {
-                status: "ordered",
-                date: "2024-01-15 10:30 AM",
-                description: "Order placed",
-              },
-              {
-                status: "confirmed",
-                date: "2024-01-15 11:45 AM",
-                description: "Order confirmed",
-              },
-              {
-                status: "processing",
-                date: "2024-01-16 09:15 AM",
-                description: "Processing order",
-              },
-              {
-                status: "shipped",
-                date: "2024-01-17 02:30 PM",
-                description: "Shipped via FedEx",
-                location: "New York, NY",
-              },
-            ],
-            estimatedDelivery: "2024-01-20",
-          },
-          "FF-789012": {
-            orderNumber: "FF-789012",
-            status: "delivered",
-            customer: "Jane Smith",
-            orderDate: "2024-01-10",
-            items: ["Dior Sauvage"],
-            total: "$89.00",
-            trackingNumber: "TRK123789456",
-            carrier: "UPS",
-            timeline: [
-              {
-                status: "ordered",
-                date: "2024-01-10 03:20 PM",
-                description: "Order placed",
-              },
-              {
-                status: "confirmed",
-                date: "2024-01-10 04:15 PM",
-                description: "Order confirmed",
-              },
-              {
-                status: "processing",
-                date: "2024-01-11 10:00 AM",
-                description: "Processing order",
-              },
-              {
-                status: "shipped",
-                date: "2024-01-12 11:30 AM",
-                description: "Shipped via UPS",
-                location: "Los Angeles, CA",
-              },
-              {
-                status: "delivered",
-                date: "2024-01-14 01:45 PM",
-                description: "Delivered",
-                location: "San Francisco, CA",
-              },
-            ],
-            estimatedDelivery: "2024-01-14",
-          },
-        };
-
-        trackingForm.addEventListener("submit", function (e) {
-          e.preventDefault();
-          const orderNumber = this.querySelector(".search-input")
-            .value.trim()
-            .toUpperCase();
-
-          if (sampleOrders[orderNumber]) {
-            displayOrderTracking(sampleOrders[orderNumber]);
-          } else {
-            displayNotFound(orderNumber);
-          }
-        });
-
-        function displayOrderTracking(order) {
-          const statusColors = {
-            ordered: "#bdc3c7",
-            confirmed: "#3498db",
-            processing: "#f39c12",
-            shipped: "#9b59b6",
-            delivered: "#27ae60",
-          };
-
-          const statusText = {
-            ordered: "Order Placed",
-            confirmed: "Order Confirmed",
-            processing: "Processing",
-            shipped: "Shipped",
-            delivered: "Delivered",
-          };
-
-          const currentStatus =
-            order.timeline[order.timeline.length - 1].status;
-
-          trackingResults.innerHTML = `
-            <div class="order-info">
-              <h3>Order #${order.orderNumber}</h3>
-              <div class="info-grid">
-                <div class="info-item">
-                  <span class="info-label">Customer</span>
-                  <span class="info-value">${order.customer}</span>
-                </div>
-                <div class="info-item">
-                  <span class="info-label">Order Date</span>
-                  <span class="info-value">${order.orderDate}</span>
-                </div>
-                <div class="info-item">
-                  <span class="info-label">Status</span>
-                  <span class="info-value" style="color: ${
-                    statusColors[currentStatus]
-                  }">${statusText[currentStatus]}</span>
-                </div>
-                <div class="info-item">
-                  <span class="info-label">Total</span>
-                  <span class="info-value">${order.total}</span>
-                </div>
-                <div class="info-item">
-                  <span class="info-label">Tracking Number</span>
-                  <span class="info-value">${order.trackingNumber}</span>
-                </div>
-                <div class="info-item">
-                  <span class="info-label">Carrier</span>
-                  <span class="info-value">${order.carrier}</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="tracking-timeline">
-              <div class="timeline-line"></div>
-              ${order.timeline
-                .map(
-                  (step, index) => `
-                <div class="timeline-item ${
-                  index === order.timeline.length - 1 ? "active" : "completed"
-                }">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <h4>${step.description}</h4>
-                    ${step.location ? `<p>${step.location}</p>` : ""}
-                    <div class="timeline-date">${step.date}</div>
-                  </div>
-                </div>
-              `
-                )
-                .join("")}
-            </div>
-
-            ${
-              currentStatus !== "delivered"
-                ? `
-              <div class="estimated-delivery">
-                <h4>Estimated Delivery</h4>
-                <div class="delivery-date">${order.estimatedDelivery}</div>
-              </div>
-            `
-                : ""
-            }
-
-            <div class="tracking-actions">
-              <button class="action-btn" onclick="window.print()">Print Details</button>
-              <button class="action-btn" onclick="contactSupport()">Contact Support</button>
-            </div>
-          `;
-        }
-
-        function displayNotFound(orderNumber) {
-          trackingResults.innerHTML = `
-            <div class="no-results">
-              <span class="material-symbols-rounded">error</span>
-              <h3>Order Not Found</h3>
-              <p>We couldn't find an order with number: <strong>${orderNumber}</strong></p>
-              <p>Please check your order number and try again, or contact our support team.</p>
-            </div>
-          `;
-        }
-
-        // Support contact function
-        window.contactSupport = function () {
-          alert(
-            "Please contact our support team at support@fragrancefables.com or call 1-800-FRAGRANCE"
-          );
-        };
-      });
-    </script>
   </body>
 </html>
