@@ -3,23 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout - Fragrance Fables</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <title>orders</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
+
     <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/responsive.css" />
-    <link rel="stylesheet" href="styles/products.css" />
     <link rel="stylesheet" href="styles/headers/navbar.css" />
     <link rel="stylesheet" href="styles/headers/sidebar.css" />
-    <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/checkout.css" />
+    <link rel="stylesheet" href="styles/orders.css" />
   </head>
   <body>
     <!--Nav Bar-->
@@ -63,29 +56,25 @@
       <div class="navbar-right">
         <ul>
           <li>
-            <a href="orders.html" class="nav-link">
+            <a href="orders.html" class="nav-link active">
               <span class="material-symbols-rounded"> orders </span>
             </a>
           </li>
           <li>
-            <a href="checkout.html" class="nav-link active">
+            <a href="checkout.html" class="nav-link">
               <span class="material-symbols-rounded">
                 shopping_cart_checkout
               </span>
-              <span class="cart-badge">3</span>
             </a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <!--Side Bar-->
+    <!--sidebar-->
     <aside class="sidebar js-sidebar">
       <header class="sidebar-header">
-        <img
-         src=""  alt="profile-picture"
-          class="header-logo"
-        />
+        <img src="" alt="profile-picture" class="header-logo" />
       </header>
 
       <div class="sidebar-content">
@@ -103,26 +92,25 @@
               <span class="menu-label">Home Page</span>
             </a>
           </li>
-         <li class="menu-item">
-            <a href="checkout.html" class="menu-link active">
+          <li class="menu-item">
+            <a href="checkout.html" class="menu-link">
               <span class="material-symbols-rounded"> shopping_cart </span>
               <span class="menu-label">Cart</span>
             </a>
           </li>
           <li class="menu-item">
-            <a href="orders.html" class="menu-link">
+            <a href="orders.html" class="menu-link active">
               <span class="material-symbols-rounded"> orders </span>
               <span class="menu-label">My Orders</span>
             </a>
           </li>
 
-           <li class="menu-item">
+          <li class="menu-item">
             <a href="tracking.html" class="menu-link">
               <span class="material-symbols-rounded"> package_2 </span>
               <span class="menu-label">Track Order</span>
             </a>
           </li>
-          
         </ul>
 
         <!--Sidebar Footer-->
@@ -140,89 +128,76 @@
       </div>
     </aside>
 
-    <!--main-->
-    <main class="checkout-container">
-      <section class="left">
-        <h2>Review your order</h2>
+    <main class="orders-container">
+      <div class="orders-header">
+        <h1>My Orders</h1>
+        <p>View and manage your recent purchases</p>
+      </div>
 
-        <!-- Order item -->
-        <div class="order-box">
-          <p class="delivery-date">
-            Delivery date: <span>Wednesday, November 19</span>
-          </p>
+      <div class="orders-filter">
+        <div class="filter-options">
+          <button class="filter-btn">All Orders</button>
+          <button class="filter-btn">Delivered</button>
+          <button class="filter-btn">Shipped</button>
+          <button class="filter-btn">Processing</button>
+          <button class="filter-btn">Cancelled</button>
+        </div>
+      </div>
 
-          <div class="item-details">
-            <img src="images/perfume/perfume1.jpg" alt="Perfume" />
-
-            <div class="item-info">
-              <h3>Acqua di Gio Profondo</h3>
-              <p class="price">$10.90</p>
-              <p class="quantity">
-                Quantity: 2
-                <button>Update</button>
-                <button>Delete</button>
-              </p>
+      <div class="orders-list">
+        <div class="order-cart">
+          <div class="order-header">
+            <div class="order-info">
+              <div class="info-item">
+                <span class="info-label">Order Number</span>
+                <span class="info-value">FF-123456</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Order Date</span>
+                <span class="info-value">2025-01-15</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Total</span>
+                <span class="info-value">$196.00</span>
+              </div>
             </div>
-            <!--Delivery Option-->
-            <div class="delivery-options">
-                <label class="delivery-option">
-                <input type="radio" checked
-                    class="delivery-option-input"
-                    name="delivery-option" />
-                <span class="checkmark"></span>
-                <div>
-                    <div class="delivery-option-date">Wednesday, November 19</div>
-                    <div class="delivery-option-price free">Free - Shipping</div>
-                </div>
-            </label>
-            
-            <label class="delivery-option js-delivery-option">
-                <input type="radio"
-                    class="delivery-option-input"
-                    name="delivery-option" />
-                <span class="checkmark"></span>
-                <div>
-                    <div class="delivery-option-date">Thursday, November 13</div>
-                    <div class="delivery-option-price">$4.99 - Shipping</div>
-                </div>
-            </label>
-            
-            <label class="delivery-option js-delivery-option">
-                <input type="radio"
-                    class="delivery-option-input"
-                    name="delivery-option" />
-                <span class="checkmark"></span>
-                <div>
-                    <div class="delivery-option-date">Tuesday, November 11</div>
-                    <div class="delivery-option-price">$9.99 - Shipping</div>
-                </div>
-            </label>
-                </div>
-             </div>
-        </div>        
-        </div>
-      </section>
+            <div class="order-status">Delivered</div>
+          </div>
 
-      <!-- Order summary -->
-      <aside class="right">
-        <h2>Order Summary</h2>
-        <div class="summary-line">
-          <span>Items (3):</span><span>$42.75</span>
+          <div class="order-items">
+            <div class="order-item">
+              <div class="item-image">
+                <span class="material-symbols-rounded">spa</span>
+              </div>
+              <div class="item-details">
+                <div class="item-name">Acqua di Gio Profondo</div>
+                <div class="item-price">$98.00</div>
+                <div class="item-quantity">Quantity : 2</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-total">
+            <span class="total-label">Order Total</span>
+            <span class="total-amount">$196.00</span>
+          </div>
+
+          <div class="order-actions">
+            <a href="tracking.html" class="action-btn">
+              <span class="material-symbols-rounded">package_2</span>
+              Track Order
+            </a>
+            <button class="action-btn">
+              <span class="material-symbols-rounded">visibility</span>
+              View Details
+            </button>
+            <button class="action-btn secondary">
+              <span class="material-symbols-rounded">replay</span>
+              Buy Again
+            </button>
+          </div>
         </div>
-        <div class="summary-line">
-          <span>Shipping & handling:</span><span>$4.99</span>
-        </div>
-        <div class="summary-line">
-          <span>Total before tax:</span><span>$47.74</span>
-        </div>
-        <div class="summary-line">
-          <span>Estimated tax (10%):</span><span>$4.77</span>
-        </div>
-        <div class="summary-total">
-          <span>Order total:</span><span>$52.51</span>
-        </div>
-        <button class="place-order">Place your order</button>
-      </aside>
+      </div>
     </main>
 
     <script src="scripts/layout.js"></script>

@@ -1,5 +1,5 @@
 .header {
-  background-color: f9fafb;
+  background-color: #f9fafb;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -40,9 +40,10 @@
 }
 
 .left h2 {
-  font: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .order-box {
@@ -55,15 +56,18 @@
   margin-bottom: 20px;
 }
 
+/* ✅ DELIVERY DATE */
 .delivery-date {
   color: #007600;
-  font: 700;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
+/* ✅ ITEM DETAILS */
 .item-details {
   display: flex;
   gap: 16px;
+  align-items: flex-start;
 }
 
 .item-details img {
@@ -104,6 +108,7 @@
   text-decoration: underline;
 }
 
+/* ✅ DELIVERY OPTIONS */
 .delivery-options {
   display: flex;
   flex-direction: column;
@@ -189,6 +194,7 @@
   font-weight: 600;
 }
 
+/* ✅ DELIVERY NOTE */
 .delivery-note {
   margin-top: 20px;
   padding: 15px;
@@ -199,9 +205,10 @@
   border-left: 4px solid #3498db;
 }
 
+/* ✅ RIGHT SUMMARY BOX */
 .right {
   padding: 10px 20px;
-  margin-top: 55px;
+  margin-top: 65px;
   flex: 1;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -211,7 +218,7 @@
 }
 
 .right h2 {
-  font: 1.1rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
@@ -248,17 +255,119 @@
   background-color: #f7ca00;
 }
 
+.cart-badge {
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  min-width: 18px;
+  text-align: center;
+}
+
+.nav-link {
+  position: relative;
+}
+/* ✅ RESPONSIVE DESIGN */
+
+/* --- Tablet screens (≤ 900px) --- */
 @media (max-width: 900px) {
   .checkout-container {
     flex-direction: column;
+    padding: 20px;
   }
 
+  .left,
   .right {
     width: 100%;
   }
 
+  .right {
+    margin-top: 20px;
+  }
+
+  .item-details {
+    flex-direction: row;
+  }
+}
+
+/* --- Small tablets / large phones (≤ 600px) --- */
+@media (max-width: 600px) {
+  .header {
+    height: 60px;
+  }
+
+  .header p {
+    font-size: 20px;
+  }
+
+  .header a,
+  .header span {
+    padding: 0 20px;
+  }
+
+  .checkout-container {
+    padding: 16px;
+    gap: 1rem;
+  }
+
   .item-details {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .item-details img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .item-info {
+    text-align: center;
+  }
+
+  .delivery-option {
+    flex-direction: column;
     align-items: flex-start;
+  }
+
+  .delivery-option-date {
+    font-size: 0.95rem;
+  }
+
+  .delivery-option-price {
+    font-size: 0.85rem;
+  }
+
+  .right {
+    padding: 16px;
+  }
+
+  .place-order {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+/* --- Small phones (≤ 400px) --- */
+@media (max-width: 400px) {
+  .checkout-container {
+    padding: 12px;
+  }
+
+  .item-details img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .item-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .summary-line,
+  .summary-total {
+    font-size: 0.85rem;
   }
 }
