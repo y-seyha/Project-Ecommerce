@@ -1,15 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
 body {
   background-color: #f8f9fa;
   color: #333;
   line-height: 1.6;
 }
+
+/* .main-container {
+  display: flex;
+} */
 
 .container {
   max-width: 1200px;
@@ -23,8 +20,8 @@ body {
   gap: 40px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  padding-inline-start: 30px;
   margin-top: 20px;
 }
 
@@ -33,18 +30,20 @@ body {
   min-width: 300px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .product-image img {
-  max-width: 100%;
+  max-width: 90%;
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .product-details {
   flex: 1;
   min-width: 300px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .product-title {
@@ -74,8 +73,8 @@ body {
 .price {
   font-size: 24px;
   font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  color: #7f8c8d;
 }
 
 .fragrance-notes {
@@ -99,7 +98,7 @@ body {
   font-size: 14px;
 }
 
-.specs {
+specs {
   margin-bottom: 25px;
 }
 
@@ -117,7 +116,6 @@ body {
 .spec-value {
   color: #555;
 }
-
 .warranty {
   margin-bottom: 25px;
   padding: 15px;
@@ -150,7 +148,7 @@ body {
   border: none;
   padding: 14px 30px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 600px;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -162,24 +160,36 @@ body {
   background-color: #2980b9;
 }
 
-.features {
+.features-container {
   display: flex;
+  justify-content: space-around;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 20px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .feature {
-  flex: 1;
-  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1 1 250px;
+  max-width: 300px;
   text-align: center;
   padding: 20px;
   background-color: #f8f9fa;
   border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
 }
 
 .feature-icon {
-  font-size: 24px;
+  font-size: 36px;
   margin-bottom: 10px;
   color: #3498db;
 }
@@ -193,15 +203,17 @@ body {
 .feature p {
   font-size: 14px;
   color: #7f8c8d;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .product-container {
+  .features-container {
     flex-direction: column;
-    padding: 20px;
+    align-items: center;
   }
 
-  .product-title {
-    font-size: 24px;
+  .feature {
+    width: 90%;
+    max-width: 400px;
   }
 }
