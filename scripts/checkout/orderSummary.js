@@ -1,5 +1,5 @@
 import { formatCurrency } from "../utils/money.js";
-import { products } from "../data/products.js";
+import { getProduct } from "../data/products.js";
 import {
   cart,
   removeFromCart,
@@ -7,32 +7,25 @@ import {
   updateQuantity,
   updateDeliveryOption,
 } from "../data/cart.js";
-import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
-import { deliveryOption } from "../data/deliveryOptions.js";
+import {
+  deliveryOptions,
+  getDeliveryOption,
+  estimateDeliveryDate,
+} from "../data/deliveryOptions.js";
+import { renderPaymentSummary } from "./paymentSummary.js";
 
 export function renderOrderSummary() {
   let cartSummaryHTML = "";
   cart.forEach((cartItem) => {
     const productId = cartItem.productId;
 
-    let matchingProduct;
-    products.forEach((product) => {
-      if (product.id === productId) {
-        matchingProduct = product;
-      }
-    });
+    const matchingProduct = getProduct(productId);
 
     const deliveryOptionId = cartItem.deliveryOptionId;
-    let selecteDeliveryOption;
-    deliveryOption.forEach((option) => {
-      if (option.id === deliveryOptionId) {
-        selecteDeliveryOption = option;
-      }
-    });
 
-    const today = dayjs();
-    const deliveryDate = today.add(selecteDeliveryOption.deliveryDays, "days");
-    const dateString = deliveryDate.format("dddd, MMMM D");
+    const deliveryOption = getDeliveryOption(deliveryOptionId);
+
+    const dateString = estimateDeliveryDate(deliveryOption);
 
     cartSummaryHTML += `
   <div class="order-box
@@ -78,10 +71,8 @@ export function renderOrderSummary() {
 
   function deliveryOptionHTML(matchingProduct, cartItem) {
     let html = "";
-    deliveryOption.forEach((deliveryOption) => {
-      const today = dayjs();
-      const deliveryDate = today.add(deliveryOption.deliveryDays, "days");
-      const dateString = deliveryDate.format("dddd, MMMM D");
+    deliveryOptions.forEach((deliveryOption) => {
+      const dateString = estimateDeliveryDate(deliveryOption);
 
       const priceString =
         deliveryOption.priceCents === 0
@@ -116,7 +107,7 @@ export function renderOrderSummary() {
 
       const container = document.querySelector(`.js-order-box-${productId}`);
       container.remove();
-      updateCartQuantity();
+      renderPaymentSummary();
     });
   });
 
@@ -162,6 +153,8 @@ export function renderOrderSummary() {
 
       const container = document.querySelector(`.js-order-box-${productId}`);
       container.classList.remove("is-editing-quantity");
+      updateQuantity(productId, newQauntity);
+      renderPaymentSummary();
     });
   });
 
@@ -169,6 +162,7 @@ export function renderOrderSummary() {
     element.addEventListener("click", () => {
       const { productId, deliveryOptionId } = element.dataset;
       updateDeliveryOption(productId, deliveryOptionId);
+      renderPaymentSummary();
     });
   });
 }
