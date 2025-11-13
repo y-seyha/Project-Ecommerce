@@ -396,3 +396,64 @@
 .is-editing-quantity .update-quantity-link {
   display: none;
 }
+
+.update-quantity-link,
+.save-quantity-link,
+.delete-quantity-link {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  margin: 0 4px;
+  text-decoration: none;
+}
+
+.update-quantity-link {
+  background-color: #0066cc;
+  color: white;
+}
+
+.update-quantity-link:hover {
+  background-color: #004499;
+}
+
+.save-quantity-link {
+  background-color: #00a650;
+  color: white;
+}
+
+.save-quantity-link:hover {
+  background-color: #008040;
+}
+
+.delete-quantity-link {
+  background-color: #cc0000;
+  color: white;
+}
+
+.delete-quantity-link:hover {
+  background-color: #990000;
+}
+
+/* Hide save link by default */
+.save-quantity-link {
+  display: none;
+}
+
+.is-editing-quantity .save-quantity-link {
+  display: inline-block;
+}
+
+.is-editing-quantity .update-quantity-link {
+  display: none;
+}
+
+.product-quantity {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+}
