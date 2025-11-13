@@ -72,7 +72,9 @@
               <span class="material-symbols-rounded">
                 shopping_cart_checkout
               </span>
-              <span class="cart-badge">3</span>
+              <span
+                class="notification-badge js-cart-quantity js-cart-notification-badge"
+              ></span>
             </a>
           </li>
         </ul>
@@ -82,10 +84,7 @@
     <!--Side Bar-->
     <aside class="sidebar js-sidebar">
       <header class="sidebar-header">
-        <img
-         src=""  alt="profile-picture"
-          class="header-logo"
-        />
+        <img src="" alt="profile-picture" class="header-logo" />
       </header>
 
       <div class="sidebar-content">
@@ -103,7 +102,7 @@
               <span class="menu-label">Home Page</span>
             </a>
           </li>
-         <li class="menu-item">
+          <li class="menu-item">
             <a href="checkout.html" class="menu-link active">
               <span class="material-symbols-rounded"> shopping_cart </span>
               <span class="menu-label">Cart</span>
@@ -116,13 +115,12 @@
             </a>
           </li>
 
-           <li class="menu-item">
+          <li class="menu-item">
             <a href="tracking.html" class="menu-link">
               <span class="material-symbols-rounded"> package_2 </span>
               <span class="menu-label">Track Order</span>
             </a>
           </li>
-          
         </ul>
 
         <!--Sidebar Footer-->
@@ -144,63 +142,8 @@
     <main class="checkout-container">
       <section class="left">
         <h2>Review your order</h2>
-
         <!-- Order item -->
-        <div class="order-box">
-          <p class="delivery-date">
-            Delivery date: <span>Wednesday, November 19</span>
-          </p>
-
-          <div class="item-details">
-            <img src="images/perfume/perfume1.jpg" alt="Perfume" />
-
-            <div class="item-info">
-              <h3>Acqua di Gio Profondo</h3>
-              <p class="price">$10.90</p>
-              <p class="quantity">
-                Quantity: 2
-                <button>Update</button>
-                <button>Delete</button>
-              </p>
-            </div>
-            <!--Delivery Option-->
-            <div class="delivery-options">
-                <label class="delivery-option">
-                <input type="radio" checked
-                    class="delivery-option-input"
-                    name="delivery-option" />
-                <span class="checkmark"></span>
-                <div>
-                    <div class="delivery-option-date">Wednesday, November 19</div>
-                    <div class="delivery-option-price free">Free - Shipping</div>
-                </div>
-            </label>
-            
-            <label class="delivery-option js-delivery-option">
-                <input type="radio"
-                    class="delivery-option-input"
-                    name="delivery-option" />
-                <span class="checkmark"></span>
-                <div>
-                    <div class="delivery-option-date">Thursday, November 13</div>
-                    <div class="delivery-option-price">$4.99 - Shipping</div>
-                </div>
-            </label>
-            
-            <label class="delivery-option js-delivery-option">
-                <input type="radio"
-                    class="delivery-option-input"
-                    name="delivery-option" />
-                <span class="checkmark"></span>
-                <div>
-                    <div class="delivery-option-date">Tuesday, November 11</div>
-                    <div class="delivery-option-price">$9.99 - Shipping</div>
-                </div>
-            </label>
-                </div>
-             </div>
-        </div>        
-        </div>
+        <div class="order-summary js-order-summary"></div>
       </section>
 
       <!-- Order summary -->
@@ -226,5 +169,6 @@
     </main>
 
     <script src="scripts/layout.js"></script>
+    <script src="scripts/checkout.js" type="module"></script>
   </body>
 </html>

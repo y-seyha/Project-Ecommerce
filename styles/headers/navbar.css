@@ -268,8 +268,12 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  margin-top: -3px;
 }
 
+/* .navbar-right .notification-badge {
+  margin-top: -5px;
+} */
 /* Navbar middle section */
 .navbar-middle {
   flex: 1;
