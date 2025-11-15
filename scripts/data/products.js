@@ -1,3 +1,5 @@
+import { formatCurrency } from "../utils/money.js";
+
 export class Product {
   id;
   name;
@@ -22,6 +24,52 @@ export class Product {
     this.instruction = productDetails.instruction;
     this.description = productDetails.description;
   }
+
+  getPrice() {
+    return `${formatCurrency(this.priceCents)}`;
+  }
+
+  //wil implement this later
+  // Returns a short description (first 60 characters)
+  getShortDescription(length = 60) {
+    return this.description.length > length
+      ? this.description.slice(0, length) + "..."
+      : this.description;
+  }
+
+  // Returns star rating HTML (for rendering)
+  getRatingStars() {
+    return "★".repeat(this.rating) + "☆".repeat(5 - this.rating);
+  }
+
+  // Check if product has a certain keyword
+  hasKeyword(keyword) {
+    return this.keyword.includes(keyword.toLowerCase());
+  }
+
+  // Format full product info (for debugging)
+  getFullInfo() {
+    return `
+      ${this.name} (${this.type}, ${this.sizeCharLink})
+      Price: ${this.getPrice()}
+      Rating: ${this.rating}
+      Keywords: ${this.keyword.join(", ")}
+      Instruction: ${this.instruction}
+      Description: ${this.description}
+      Warranty: ${this.warrantyLink}
+    `;
+  }
+}
+
+// Will implement later
+// Filter products by keyword
+export function filterProductsByKeyword(keyword) {
+  return products.filter((product) => product.hasKeyword(keyword));
+}
+
+// Get top rated products (>= 5 stars)
+export function getTopRatedProducts(minRating = 5) {
+  return products.filter((product) => product.rating >= minRating);
 }
 
 export function getProduct(productId) {
@@ -315,4 +363,6 @@ export const products = [
     description:
       "Modern aromatic fragrance with apple, ginger, and sage notes for the contemporary man.",
   },
-];
+].map((productDetails) => {
+  return new Product(productDetails);
+});

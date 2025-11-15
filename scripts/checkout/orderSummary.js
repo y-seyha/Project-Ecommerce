@@ -39,9 +39,7 @@ export function renderOrderSummary() {
 
             <div class="item-info">
               <h3>${matchingProduct.name}</h3>
-              <p class="price">$${formatCurrency(
-                matchingProduct.priceCents
-              )}</p>
+              <p class="price">$${matchingProduct.getPrice()}</p>
               <div class="product-quantity">
             <span> Quantity: <span class="quantity-label 
             js-quantity-label-${matchingProduct.id}">
@@ -109,6 +107,7 @@ export function renderOrderSummary() {
 
       const container = document.querySelector(`.js-order-box-${productId}`);
       container.remove();
+      renderOrderSummary();
       renderPaymentSummary();
     });
   });
