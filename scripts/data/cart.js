@@ -3,7 +3,11 @@ export let cart;
 loadFromStorage();
 
 export function loadFromStorage() {
-  if (!cart) {
+  const storedCart = localStorage.getItem("cart");
+
+  if (storedCart) {
+    cart = JSON.parse(storedCart);
+  } else {
     cart = [
       {
         productId: "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5g",
@@ -16,6 +20,7 @@ export function loadFromStorage() {
         deliveryOptionId: "2",
       },
     ];
+    saveToStorage(); // optional: save default cart to localStorage
   }
 }
 

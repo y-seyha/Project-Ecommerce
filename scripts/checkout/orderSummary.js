@@ -83,9 +83,11 @@ export function renderOrderSummary() {
                     data-product-id = "${matchingProduct.id}"
                     data-delivery-id = "${deliveryOption.id}">
                       <label class="delivery-option">
-                        <input type="radio" ${isChecked ? "checked" : ""}
+                        <input 
+                        type="radio" ${isChecked ? "checked" : ""}
                           class="delivery-option-input"
-                          name="delivery-option-${matchingProduct.id}" />
+                          name="delivery-option-${matchingProduct.id}" /> 
+                          
                      <span class="checkmark"></span>
                        <div>
                          <div class="delivery-option-date">${dateString}</div>
@@ -160,8 +162,8 @@ export function renderOrderSummary() {
 
   document.querySelectorAll(".js-delivery-option").forEach((element) => {
     element.addEventListener("click", () => {
-      const { productId, deliveryOptionId } = element.dataset;
-      updateDeliveryOption(productId, deliveryOptionId);
+      const { productId, deliveryId } = element.dataset;
+      updateDeliveryOption(productId, deliveryId);
       renderPaymentSummary();
     });
   });
