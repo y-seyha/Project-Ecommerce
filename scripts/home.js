@@ -9,8 +9,11 @@ function renderHomepage(productList = products) {
   productList.forEach((product) => {
     productSummaryHTML += `
       <div class="product-card">
-        <img src="./images/${product.img}" alt="${product.name}" />
-        <h3 class="name">${product.name}</h3>
+          <a href="description.html?id=${product.id}" class="product-link">
+          <img src="./images/${product.img}" alt="${product.name}" />
+          <h3 class="name">${product.name}</h3>
+         </a>
+
         <div class="stars">${getStarRating(product.rating)}</div>
         <div class="price">$${product.getPrice()}</div>
         <div class="keywords">${product.keyword.join(", ")}</div>
@@ -46,7 +49,7 @@ function renderHomepage(productList = products) {
 }
 
 // --- ATTACH ADD TO CART LISTENER ---
-function attachAddToCartListener() {
+export function attachAddToCartListener() {
   document.querySelectorAll(".js-add-to-cart").forEach((button) => {
     button.addEventListener("click", () => {
       const productId = button.dataset.productId;
@@ -57,7 +60,7 @@ function attachAddToCartListener() {
 }
 
 // --- UPDATE CART QUANTITY ---
-function updateCartQuantity() {
+export function updateCartQuantity() {
   const cartQuantity = calculateCartQuantity();
   const badge = document.querySelector(".js-cart-notification-badge");
   if (badge) badge.textContent = cartQuantity;

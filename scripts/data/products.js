@@ -19,6 +19,7 @@ export class Product {
     this.rating = productDetails.rating;
     this.priceCents = productDetails.priceCents;
     this.keyword = productDetails.keyword;
+    this.type = productDetails.type;
     this.sizeCharLink = productDetails.sizeCharLink;
     this.warrantyLink = productDetails.warrantyLink;
     this.instruction = productDetails.instruction;

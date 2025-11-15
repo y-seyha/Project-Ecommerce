@@ -58,6 +58,9 @@
               <span class="material-symbols-rounded">
                 shopping_cart_checkout
               </span>
+              <span
+                class="notification-badge js-cart-quantity js-cart-notification-badge"
+              ></span>
             </a>
           </li>
         </ul>
@@ -123,90 +126,34 @@
 
     <!--main-->
     <main class="main-container">
-      <div class="container">
-        <div class="product-container">
-          <div class="product-image">
-            <img src="images/perfume/perfume1.1.1.jpg" alt="Product Img" />
-          </div>
-
-          <div class="product-details">
-            <h1 class="product-title">Product Name</h1>
-
-            <div class="rating">
-              <div class="stars">stars</div>
-              <div class="rating-text">(3,4)</div>
-            </div>
-
-            <div class="price">$98.99</div>
-
-            <div class="fragrance-notes">
-              <span>Fragrance Notes : </span>
-              <div class="note-tags">
-                <span class="note-tag">aquatic</span>
-                <span class="note-tag">fresh</span>
-                <span class="note-tag">masculine</span>
-              </div>
-            </div>
-
-            <div class="specs">
-              <div class="spec-item">
-                <div class="spec-label">Type:</div>
-                <div class="spec-value">Eau de Parfum</div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-label">Size:</div>
-                <div class="spec-value">125ml</div>
-              </div>
-            </div>
-
-            <div class="warranty">
-              <h3>Warranty Info</h3>
-              <p>30-day money-back guarantee. 1-year manufacturer warranty.</p>
-            </div>
-
-            <div class="description">
-              <p>
-                Fresh and light for daytime wear. Acqua di Gio Profondo is a
-                vibrant, aromatic fragrance that captures the intensity of the
-                deep sea. With notes of aquatic accords, bergamot, and mineral
-                notes, it creates a scent that is both refreshing and profoundly
-                masculine.
-              </p>
-            </div>
-
-            <div class="divider"></div>
-
-            <button class="add-to-cart">Add to creates</button>
-          </div>
+      <div class="container js-main-container"></div>
+      <div class="features-container">
+        <div class="feature">
+          <div class="feature-icon">🚚</div>
+          <h3>Free Shipping</h3>
+          <p>Enjoy free delivery on all orders over $50.</p>
         </div>
 
-        <div class="features-container">
-          <div class="feature">
-            <div class="feature-icon">🚚</div>
-            <h3>Free Shipping</h3>
-            <p>Enjoy free delivery on all orders over $50.</p>
-          </div>
+        <div class="feature">
+          <div class="feature-icon">↩️</div>
+          <h3>Easy Returns</h3>
+          <p>30-day return policy</p>
+        </div>
 
-          <div class="feature">
-            <div class="feature-icon">↩️</div>
-            <h3>Easy Returns</h3>
-            <p>30-day return policy</p>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">🔒</div>
-            <h3>Secure Payment</h3>
-            <p>Your transactions are safe and encrypted.</p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">💎</div>
-            <h3>Premium Quality</h3>
-            <p>Authentic luxury fragrances</p>
-          </div>
+        <div class="feature">
+          <div class="feature-icon">🔒</div>
+          <h3>Secure Payment</h3>
+          <p>Your transactions are safe and encrypted.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💎</div>
+          <h3>Premium Quality</h3>
+          <p>Authentic luxury fragrances</p>
         </div>
       </div>
     </main>
 
-    <script src="scripts/layout.js"></script>
+    <script src="scripts/layout.js" type="module"></script>
+    <script src="scripts/descriptions.js" type="module"></script>
   </body>
 </html>

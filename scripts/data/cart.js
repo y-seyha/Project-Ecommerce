@@ -55,6 +55,7 @@ export function addToCart(productId) {
 
 function showAddMessage(productId) {
   const message = document.querySelector(`.js-add-to-cart-${productId}`);
+  if (!message) return;
   message.classList.add("add-to-cart-visible");
 
   setTimeout(() => {
