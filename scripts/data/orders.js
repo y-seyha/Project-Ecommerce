@@ -64,3 +64,27 @@ export function placeOrder() {
 
   window.location.href = "orders.html";
 }
+
+export function updateOrdersBadge(allOrders) {
+  if (!ordersBadge) return;
+
+  // Example: count orders that are "Pending" or "Processing"
+  const pendingOrders = allOrders.filter((order) =>
+    ["pending", "processing"].includes(order.status.toLowerCase())
+  );
+
+  ordersBadge.textContent = pendingOrders.length;
+
+  // Optional: hide badge if 0
+  ordersBadge.style.display = pendingOrders.length ? "inline-block" : "none";
+  const notificationIcon = document.querySelector(".orders-notification .icon");
+
+  notificationIcon?.addEventListener("click", () => {
+    // For simplicity, just alert recent orders
+    const recentOrders = allOrders.slice(0, 5);
+    const list = recentOrders
+      .map((o) => `${o.orderNumber} - ${o.status}`)
+      .join("\n");
+    alert("Recent Orders:\n" + list);
+  });
+}

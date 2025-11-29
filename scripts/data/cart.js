@@ -92,3 +92,9 @@ export function clearCart() {
   cart.length = 0;
   localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+export function updateCartQuantity(calculateCartQuantity) {
+  const cartQuantity = calculateCartQuantity();
+  document.querySelector(".js-cart-notification-badge").innerHTML =
+    cartQuantity;
+}

@@ -1,14 +1,15 @@
 import { formatCurrency } from "./utils/money.js";
 import { products, getProduct } from "./data/products.js";
 import { deliveryOptions } from "./data/deliveryOptions.js";
-import { calculateCartQuantity } from "./data/cart.js";
+import { calculateCartQuantity, updateCartQuantity } from "./data/cart.js";
+import { updateOrdersBadge } from "./data/orders.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const defaultOrders = [];
   const ordersList = document.getElementById("ordersList");
   const filterButtons = document.querySelectorAll(".filter-btn");
 
   // Load orders from localStorage + defaults
+  const defaultOrders = [];
   const localOrders = JSON.parse(localStorage.getItem("orders")) || [];
   const allOrders = [...localOrders, ...defaultOrders];
 
@@ -204,39 +205,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return orderCart;
   }
 
-  function updateCartQuantity() {
-    const cartQuantity = calculateCartQuantity();
-    document.querySelector(".js-cart-notification-badge").innerHTML =
-      cartQuantity;
-  }
-  updateCartQuantity();
+  updateCartQuantity(calculateCartQuantity);
 
   const ordersBadge = document.getElementById("ordersBadge");
-
-  function updateOrdersBadge() {
-    if (!ordersBadge) return;
-
-    // Example: count orders that are "Pending" or "Processing"
-    const pendingOrders = allOrders.filter((order) =>
-      ["pending", "processing"].includes(order.status.toLowerCase())
-    );
-
-    ordersBadge.textContent = pendingOrders.length;
-
-    // Optional: hide badge if 0
-    ordersBadge.style.display = pendingOrders.length ? "inline-block" : "none";
-  }
-
-  // Call initially
-  updateOrdersBadge();
-  const notificationIcon = document.querySelector(".orders-notification .icon");
-
-  notificationIcon?.addEventListener("click", () => {
-    // For simplicity, just alert recent orders
-    const recentOrders = allOrders.slice(0, 5);
-    const list = recentOrders
-      .map((o) => `${o.orderNumber} - ${o.status}`)
-      .join("\n");
-    alert("Recent Orders:\n" + list);
-  });
+  updateOrdersBadge(allOrders);
 });

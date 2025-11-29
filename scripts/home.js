@@ -1,5 +1,6 @@
 import { products } from "./data/products.js";
 import { addToCart, calculateCartQuantity } from "./data/cart.js";
+import { updateOrdersBadge } from "./data/orders.js";
 
 // --- RENDER HOMEPAGE ---
 function renderHomepage(productList = products) {
@@ -126,29 +127,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const ordersBadge = document.getElementById("ordersBadge");
 
-function updateOrdersBadge() {
-  if (!ordersBadge) return;
-
-  // Example: count orders that are "Pending" or "Processing"
-  const pendingOrders = allOrders.filter((order) =>
-    ["pending", "processing"].includes(order.status.toLowerCase())
-  );
-
-  ordersBadge.textContent = pendingOrders.length;
-
-  // Optional: hide badge if 0
-  ordersBadge.style.display = pendingOrders.length ? "inline-block" : "none";
-}
-
-// Call initially
-updateOrdersBadge();
-const notificationIcon = document.querySelector(".orders-notification .icon");
-
-notificationIcon?.addEventListener("click", () => {
-  // For simplicity, just alert recent orders
-  const recentOrders = allOrders.slice(0, 5);
-  const list = recentOrders
-    .map((o) => `${o.orderNumber} - ${o.status}`)
-    .join("\n");
-  alert("Recent Orders:\n" + list);
-});
+updateOrdersBadge(allOrders);
