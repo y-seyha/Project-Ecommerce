@@ -88,7 +88,7 @@ export const products = [
   {
     id: "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5g",
     name: "Acqua di Gio Profondo",
-    img: "../../images/perfume/perfume1.1.jpg",
+    img: "images/perfume/perfume1.1.jpg",
     rating: 4,
     priceCents: 9800,
     keyword: ["aquatic", "fresh", "masculine"],
@@ -102,7 +102,7 @@ export const products = [
   {
     id: "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
     name: "Armani Stronger With You Intensely",
-    img: "../../images/perfume/perfume2.1.jpg",
+    img: "images/perfume/perfume2.1.jpg",
     rating: 5,
     priceCents: 9800,
     keyword: ["amber", "vanilla", "masculine"],
@@ -116,7 +116,7 @@ export const products = [
   {
     id: "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
     name: "Bleu de Chanel EDP",
-    img: "../../images/perfume/perfume1.1.1.jpg",
+    img: "images/perfume/perfume1.1.1.jpg",
     rating: 5,
     priceCents: 13500,
     keyword: ["woody", "aromatic", "masculine"],
@@ -130,7 +130,7 @@ export const products = [
   {
     id: "9a0b1c2d-3e4f-5g6h-7i8j-9k0l1m2n3o4p",
     name: "Bvlgari Man In Black",
-    img: "../../images/perfume/perfume4.jpg",
+    img: "images/perfume/perfume4.jpg",
     rating: 4,
     priceCents: 9800,
     keyword: ["spicy", "leather", "masculine"],
@@ -143,7 +143,7 @@ export const products = [
   {
     id: "6d7e8f9a-0b1c-2d3e-4f5g-6h7i8j9k0l1m",
     name: "Creed Aventus",
-    img: "../../images/perfume/perfume5.jpg",
+    img: "images/perfume/perfume5.jpg",
     rating: 5,
     priceCents: 48500,
     keyword: ["fruity", "woody", "luxury"],
@@ -157,7 +157,7 @@ export const products = [
   {
     id: "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
     name: "Dior Sauvage EDP",
-    img: "../../images/perfume/perfume6.jpg",
+    img: "images/perfume/perfume6.jpg",
     rating: 5,
     priceCents: 12500,
     keyword: ["fresh", "woody", "masculine"],
@@ -171,7 +171,7 @@ export const products = [
   {
     id: "3a4b5c6d-7e8f-9a0b-1c2d-3e4f5g6h7i8j",
     name: "Dolce & Gabbana The One EDP",
-    img: "../../images/perfume/perfume7.jpg",
+    img: "images/perfume/perfume7.jpg",
     rating: 5,
     priceCents: 10500,
     keyword: ["amber", "tobacco", "masculine"],
@@ -185,7 +185,7 @@ export const products = [
   {
     id: "8f9a0b1c-2d3e-4f5g-6h7i-8j9k0l1m2n3o",
     name: "Givenchy Gentleman Reserve Privée",
-    img: "../../images/perfume/perfume8.jpg",
+    img: "images/perfume/perfume8.jpg",
     rating: 4,
     priceCents: 11200,
     keyword: ["woody", "boozy", "masculine"],
@@ -199,7 +199,7 @@ export const products = [
   {
     id: "0b1c2d3e-4f5g-6h7i-8j9k-0l1m2n3o4p5q",
     name: "Gucci Guilty Absolute",
-    img: "../../images/perfume/perfume9.jpg",
+    img: "images/perfume/perfume9.jpg",
     rating: 4,
     priceCents: 10500,
     keyword: ["leather", "woody", "masculine"],
@@ -213,7 +213,7 @@ export const products = [
   {
     id: "4b5c6d7e-8f9a-0b1c-2d3e-4f5g6h7i8j9k",
     name: "Hermès Terre d'Hermès",
-    img: "../../images/perfume/perfume10.jpg",
+    img: "images/perfume/perfume10.jpg",
     rating: 5,
     priceCents: 11800,
     keyword: ["woody", "citrus", "masculine"],
@@ -227,7 +227,7 @@ export const products = [
   {
     id: "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
     name: "Jean Paul Gaultier Le Male Le Parfum",
-    img: "../../images/perfume/perfume11.jpg",
+    img: "images/perfume/perfume11.jpg",
     rating: 5,
     priceCents: 10500,
     keyword: ["vanilla", "iris", "masculine"],
@@ -241,7 +241,7 @@ export const products = [
   {
     id: "2f3a4b5c-6d7e-8f9a-0b1c-2d3e4f5g6h7i",
     name: "Louis Vuitton L'Immensité",
-    img: "../../images/perfume/perfume12.jpg",
+    img: "images/perfume/perfume12.jpg",
     rating: 5,
     priceCents: 28500,
     keyword: ["fresh", "amber", "luxury"],
@@ -255,7 +255,7 @@ export const products = [
   {
     id: "7e8f9a0b-1c2d-3e4f-5c6d-7i8j9k0l1m2n",
     name: "Montblanc Explorer",
-    img: "../../images/perfume/perfume13.jpg",
+    img: "images/perfume/perfume13.jpg",
     rating: 4,
     priceCents: 6500,
     keyword: ["woody", "aromatic", "masculine"],
@@ -269,7 +269,7 @@ export const products = [
   {
     id: "1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5g6h",
     name: "Paco Rabanne 1 Million",
-    img: "../../images/perfume/perfume14.jpg",
+    img: "images/perfume/perfume14.jpg",
     rating: 4,
     priceCents: 9200,
     keyword: ["leather", "spicy", "masculine"],
@@ -283,7 +283,7 @@ export const products = [
   {
     id: "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
     name: "Prada L'Homme",
-    img: "../../images/perfume/perfume15.jpg",
+    img: "images/perfume/perfume15.jpg",
     rating: 4,
     priceCents: 11200,
     keyword: ["fresh", "soapy", "masculine"],
@@ -297,7 +297,7 @@ export const products = [
   {
     id: "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
     name: "Tom Ford Noir Extreme",
-    img: "../../images/perfume/perfume16.jpg",
+    img: "images/perfume/perfume16.jpg",
     rating: 5,
     priceCents: 24500,
     keyword: ["oriental", "gourmand", "luxury"],
@@ -311,7 +311,7 @@ export const products = [
   {
     id: "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
     name: "Versace Dylan Blue",
-    img: "../../images/perfume/perfume17.jpg",
+    img: "images/perfume/perfume17.jpg",
     rating: 4,
     priceCents: 8500,
     keyword: ["fresh", "aquatic", "masculine"],
@@ -325,7 +325,7 @@ export const products = [
   {
     id: "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
     name: "Versace Eros Flame",
-    img: "../../images/perfume/perfume18.jpg",
+    img: "images/perfume/perfume18.jpg",
     rating: 4,
     priceCents: 8900,
     keyword: ["citrus", "woody", "masculine"],
@@ -339,7 +339,7 @@ export const products = [
   {
     id: "5c6d7e8f-9a0b-1c2d-3e4f-5g6h7i8j9k0l",
     name: "Viktor&Rolf Spicebomb Extreme",
-    img: "../../images/perfume/perfume19.jpg",
+    img: "images/perfume/perfume19.jpg",
     rating: 5,
     priceCents: 11200,
     keyword: ["spicy", "tobacco", "masculine"],
@@ -353,7 +353,7 @@ export const products = [
   {
     id: "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
     name: "YSL Y EDP",
-    img: "../../images/perfume/perfume20.jpg",
+    img: "images/perfume/perfume20.jpg",
     rating: 5,
     priceCents: 11200,
     keyword: ["fresh", "woody", "masculine"],

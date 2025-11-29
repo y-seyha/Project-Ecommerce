@@ -8,10 +8,20 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/headers/navbar.css" />
     <link rel="stylesheet" href="styles/headers/sidebar.css" />
     <link rel="stylesheet" href="styles/website/orders.css" />
+    <link rel="stylesheet" href="styles/website/footer.css" />
   </head>
   <body>
     <!--Nav Bar-->
@@ -57,6 +67,10 @@
           <li>
             <a href="orders.html" class="nav-link active">
               <span class="material-symbols-rounded"> orders </span>
+              <span
+                class="notification-badge orders-notifications badge"
+                id="ordersBadge"
+              ></span>
             </a>
           </li>
           <li>
@@ -146,62 +160,53 @@
         </div>
       </div>
 
-      <div class="orders-list">
-        <div class="order-cart">
-          <div class="order-header">
-            <div class="order-info">
-              <div class="info-item">
-                <span class="info-label">Order Number</span>
-                <span class="info-value">FF-123456</span>
-              </div>
-              <div class="info-item">
-                <span class="info-label">Order Date</span>
-                <span class="info-value">2025-01-15</span>
-              </div>
-              <div class="info-item">
-                <span class="info-label">Total</span>
-                <span class="info-value">$196.00</span>
-              </div>
+      <div class="orders-list" id="ordersList"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About US</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Affliate Program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Get Help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Payment Option</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Online Shop</h4>
+            <ul>
+              <li><a href="#">All</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Woman</a></li>
+              <li><a href="#">Other</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow US</h4>
+            <div class="social-links">
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="order-status">Delivered</div>
-          </div>
-
-          <div class="order-items">
-            <div class="order-item">
-              <div class="item-image">
-                <span class="material-symbols-rounded">spa</span>
-              </div>
-              <div class="item-details">
-                <div class="item-name">Acqua di Gio Profondo</div>
-                <div class="item-price">$98.00</div>
-                <div class="item-quantity">Quantity : 2</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="order-total">
-            <span class="total-label">Order Total</span>
-            <span class="total-amount">$196.00</span>
-          </div>
-
-          <div class="order-actions">
-            <a href="tracking.html" class="action-btn">
-              <span class="material-symbols-rounded">package_2</span>
-              Track Order
-            </a>
-            <button class="action-btn">
-              <span class="material-symbols-rounded">visibility</span>
-              View Details
-            </button>
-            <button class="action-btn secondary">
-              <span class="material-symbols-rounded">replay</span>
-              Buy Again
-            </button>
           </div>
         </div>
       </div>
-    </main>
-
+    </footer>
+    <div id="ordersList"></div>
     <script src="scripts/layout.js" type="module"></script>
     <script src="scripts/orders.js" type="module"></script>
   </body>

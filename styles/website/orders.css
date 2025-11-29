@@ -153,17 +153,20 @@
 }
 
 .item-name {
+  padding-left: 20px;
   font-weight: 600;
   color: #2c3e50;
   margin-bottom: 5px;
 }
 
 .item-price {
+  padding-left: 20px;
   color: #666;
   margin-bottom: 5px;
 }
 
 .item-quantity {
+  padding-left: 20px;
   color: #999;
   font-size: 0.9rem;
 }
@@ -396,4 +399,47 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+/* Overwrite */
+
+.item-image img {
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+/* Order items container */
+.order-items {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+/* Expanded state when "View Details" is clicked */
+.order-items.expanded {
+  max-height: 1000px; /* large enough to fit all items */
+  opacity: 1;
+}
+
+/* Optional: smooth fade for each item */
+.order-item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animate individual items when container expands */
+.order-items.expanded .order-item {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.order-items:not(.expanded) .order-item {
+  transform: translateY(-10px);
+  opacity: 0;
 }

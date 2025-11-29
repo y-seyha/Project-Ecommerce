@@ -14,7 +14,7 @@ if (!product) {
   mainContainer.innerHTML = `
     <div class="product-container">
       <div class="product-image">
-        <img src="images/${product.img}" alt="${product.name}" />
+        <img src="${product.img}" alt="${product.name}" />
       </div>
 
       <div class="product-details">

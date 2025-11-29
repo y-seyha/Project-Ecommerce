@@ -87,3 +87,8 @@ export function updateDeliveryOption(productId, deliveryOptionId) {
   item.deliveryOptionId = deliveryOptionId;
   save();
 }
+
+export function clearCart() {
+  cart.length = 0;
+  localStorage.setItem("cart", JSON.stringify(cart));
+}

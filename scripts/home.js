@@ -10,7 +10,7 @@ function renderHomepage(productList = products) {
     productSummaryHTML += `
       <div class="product-card">
           <a href="description.html?id=${product.id}" class="product-link">
-          <img src="./images/${product.img}" alt="${product.name}" />
+          <img src="${product.img}" alt="${product.name}" />
           <h3 class="name">${product.name}</h3>
          </a>
 
@@ -122,4 +122,33 @@ function attachSearchListener() {
 document.addEventListener("DOMContentLoaded", () => {
   renderHomepage(); // Render main homepage
   attachSearchListener(); // Activate search
+});
+
+const ordersBadge = document.getElementById("ordersBadge");
+
+function updateOrdersBadge() {
+  if (!ordersBadge) return;
+
+  // Example: count orders that are "Pending" or "Processing"
+  const pendingOrders = allOrders.filter((order) =>
+    ["pending", "processing"].includes(order.status.toLowerCase())
+  );
+
+  ordersBadge.textContent = pendingOrders.length;
+
+  // Optional: hide badge if 0
+  ordersBadge.style.display = pendingOrders.length ? "inline-block" : "none";
+}
+
+// Call initially
+updateOrdersBadge();
+const notificationIcon = document.querySelector(".orders-notification .icon");
+
+notificationIcon?.addEventListener("click", () => {
+  // For simplicity, just alert recent orders
+  const recentOrders = allOrders.slice(0, 5);
+  const list = recentOrders
+    .map((o) => `${o.orderNumber} - ${o.status}`)
+    .join("\n");
+  alert("Recent Orders:\n" + list);
 });

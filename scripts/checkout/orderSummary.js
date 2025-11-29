@@ -163,6 +163,7 @@ export function renderOrderSummary() {
     element.addEventListener("click", () => {
       const { productId, deliveryId } = element.dataset;
       updateDeliveryOption(productId, deliveryId);
+      renderOrderSummary();
       renderPaymentSummary();
     });
   });

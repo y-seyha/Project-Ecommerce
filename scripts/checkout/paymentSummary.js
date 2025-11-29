@@ -2,7 +2,7 @@ import { cart } from "../data/cart.js";
 import { getProduct } from "../data/products.js";
 import { getDeliveryOption } from "../data/deliveryOptions.js";
 import { formatCurrency } from "../utils/money.js";
-
+import { placeOrder } from "../data/orders.js";
 export function renderPaymentSummary() {
   let productPriceCents = 0;
   let shippingPriceCents = 0;
@@ -43,8 +43,12 @@ export function renderPaymentSummary() {
         <div class="summary-total">
           <span>Order total:</span><span>$${formatCurrency(totalCents)}</span>
         </div>
-        <button class="place-order">Place your order</button>
+        <button class="place-order js-place-order">Place your order</button>
   `;
 
   document.querySelector(".js-right").innerHTML = html;
+
+  document.querySelector(".js-place-order").addEventListener("click", () => {
+    placeOrder();
+  });
 }
